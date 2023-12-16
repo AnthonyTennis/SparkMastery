@@ -9,7 +9,7 @@ def get_status_counts(df):
         print(f"Status: {status}, Count: {count}")
 
 def get_successful_jobs(df):
-    return df.filter(col("status") == "Successful")
+    return df.filter(col("status") == "Completed")
 
 def get_failed_jobs(df):
     return df.filter(col("status") == "Failed")
@@ -34,7 +34,7 @@ def retry_failed_jobs(failed_df):
     return failed_df.withColumn("status", when(col("status") == "Failed", "Pending").otherwise(col("status")))
 
 def filter_jobs_by_team(df, team_name):
-    filtered_df = df.filter(df.teamName == team_name)
+    filtered_df = df.filter(df.sendingTeam == team_name)
     return filtered_df
 
 def average_duration_by_status(df):

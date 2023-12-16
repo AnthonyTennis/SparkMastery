@@ -1,0 +1,7 @@
+jobId,sendingTeam,status,startDate,endDate
+Job1,JuiceBox,Completed,2020-01-01,2020-01-10
+Job2,JuiceBox,Failed,2020-01-02,2020-01-11
+Job3,MindOvermatter,Pending,2020-01-03,
+Job4,Distributo,In Progress,2020-01-04,
+Job5,AndersonSquad,Completed,2020-01-05,2020-01-15
+Job6,AndersonSquad,Failed,2020-01-06,2020-01-16
